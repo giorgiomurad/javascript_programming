@@ -22,7 +22,7 @@ if(even === undefined) {
 
     console.log('Invalid Value');
 }
-else if (even !== undefined) {
+else {
     if (even)
         console.log('The number ' + number + ' is Even.');
     else
