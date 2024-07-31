@@ -14,32 +14,18 @@
 //
 // Author : Giorgio Murad
 
-let s = '';     // String variable
-let r = 1;      // Integer that indicates each row
+let s = '';
 
-
-// Iterating 64 times
-for (let i = 1; i <= 8*8; i++)
-{
-    // If i is even, a space is added to s
-    // Otherwise, a sharp is added
-    if (i % 2 == 0)
-        s += ' ';
+// Row Loop
+for(let r = 1; r <= 12; r++){
+  // Column Loop
+  for(let c = 1; c <= 6; c++){
+    if(r % 2 === 0)
+      s += ' #';
     else
-        s += '#';
-
-
-    // For every 8 iterations, a new line break is added to s
-    if (i % 8 == 0)
-    {
-        s += '\n';
-
-        // For every even row, a space is added to s
-        r++;
-        if (r % 2 == 0)
-            s += ' ';
-    }
+      s += '# ';
+  }
+  s += '\n';
 }
 
-// Displaying the final result
 console.log(s);
